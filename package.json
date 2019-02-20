@@ -1,0 +1,20 @@
+{
+  "name": "ro-python-hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "env-cmd env/security.local.env serverless offline start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^1.37.1",
+    "serverless-python-requirements": "^4.3.0"
+  },
+  "dependencies": {
+    "env-cmd": "^8.0.2",
+    "serverless-offline-python": "^3.22.0"
+  }
+}
