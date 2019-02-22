@@ -8,6 +8,8 @@ pytest = "*"
 
 [packages]
 pytest = "*"
+boto3 = "*"
+python-slugify = "*"
 
 [requires]
 python_version = "3.6"

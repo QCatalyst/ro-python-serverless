@@ -19,6 +19,7 @@ var/
 *.egg
 *.swp
 __pycache__
+.DS_Store
 
 # Serverless directories
 .serverless

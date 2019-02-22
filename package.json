@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "env-cmd env/security.local.env serverless offline start"
+    "start": "env-cmd .env serverless offline start",
+    "deploy": "env-cmd .env-aws sls deploy --verbose"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,10 @@
   },
   "dependencies": {
     "env-cmd": "^8.0.2",
-    "serverless-offline-python": "^3.22.0"
+    "serverless-offline-python": "^3.22.0",
+    "serverless-plugin-existing-s3": "^2.3.0",
+    "serverless-s3-local": "^0.3.22",
+    "serverless-s3-local-sync": "^1.0.7",
+    "serverless-s3-sync": "^1.7.2"
   }
 }
