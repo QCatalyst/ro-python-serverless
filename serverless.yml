@@ -57,13 +57,13 @@ provider:
 
 functions:
     hello:
-       handler: handler.hello
+       handler: serverless_hello/handler.hello
        events:
            - http:
                path: hello
                method: get
     start_work:
-       handler: worker.start_work
+       handler: serverless_hello/worker.start_work
        events:
            - http:
                path: start-work

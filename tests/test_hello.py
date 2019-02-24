@@ -1,6 +1,6 @@
 import pytest
 
-from handler import hello
+from serverless_hello.handler import hello
 
 
 def test_hello_200():
