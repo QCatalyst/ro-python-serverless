@@ -3,5 +3,5 @@ def eval_expression(str_expression):
     of the result
     """
 
-    return eval(str_expression)
+    return str(eval(str_expression))
 

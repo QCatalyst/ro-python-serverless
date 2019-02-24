@@ -55,6 +55,12 @@ provider:
       S3_ENDPOINT: ${env:S3_ENDPOINT}
       S3_REGION: ${self:provider.region}
 
+package:
+    exclude:
+        - ./**
+    include:
+        - serverless_hello/**
+
 functions:
     hello:
        handler: serverless_hello/handler.hello
@@ -69,7 +75,7 @@ functions:
                path: start-work
                method: get
     compute:
-        handler: worker.compute
+        handler: serverless_hello/worker.compute
         events:
             - existingS3:
                 bucket: ${self:provider.environment.PROC_BUCKET}

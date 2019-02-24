@@ -1,8 +1,8 @@
 import json
 import os
 
-from .s3 import get_object_from_s3, put_object_into_s3
-from .worker_support import eval_expression
+from serverless_hello.s3 import get_object_from_s3, put_object_into_s3
+from serverless_hello.worker_support import eval_expression
 
 
 WORK_BUCKET = os.environ['WORK_BUCKET']

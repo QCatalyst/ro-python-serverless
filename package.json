@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "env-cmd .env serverless offline start",
+    "start-local": "env-cmd .env serverless offline start",
     "deploy": "env-cmd .env-aws sls deploy --verbose"
   },
   "author": "",

@@ -20,6 +20,7 @@ var/
 *.swp
 __pycache__
 .DS_Store
+.s3
 
 # Serverless directories
 .serverless
