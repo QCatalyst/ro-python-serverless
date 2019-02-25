@@ -16,3 +16,9 @@ clean:
 test:
 	pipenv run pytest
 
+deploy:
+	pipenv run npm run deploy
+
+start-local:
+	pipenv run npm run start-local
+
