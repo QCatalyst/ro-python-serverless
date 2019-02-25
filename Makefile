@@ -7,11 +7,13 @@ all: clean setup
 setup:
 	@echo "Installing packages.."
 	$(PYTHON) -m pip install pipenv && \
-	pipenv install --dev
+	pipenv install --dev && \
+	npm install
 
 clean:
 	@echo "Cleaning up.."
-	pipenv --rm || true
+	pipenv --rm && \
+	rm -rf node_modules
 
 test:
 	pipenv run pytest
