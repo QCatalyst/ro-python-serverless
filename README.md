@@ -2,6 +2,8 @@ A simple example of using the [serverless](https://serverless.com) stack.
 
 Getting started
 ===============
+You should have python 3.6 and pipenv set up.
+
 ```sh
 make setup
 ```
