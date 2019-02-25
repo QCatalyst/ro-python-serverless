@@ -11,6 +11,7 @@ plugins:
   - serverless-s3-sync
   - serverless-plugin-existing-s3
   - serverless-offline-python
+  - serverless-plugin-tracing
 
 custom:
     pythonRequirements:
@@ -40,6 +41,7 @@ provider:
   memorySize: 1024
   timeout: 120
   versionFunctions: true
+  tracing: true
 
   iamRoleStatements:
       - Effect: Allow
@@ -47,6 +49,12 @@ provider:
             - s3:*
         Resource:
             - arn:aws:s3:::${self:service:name}-${self:provider.stage}-*
+      - Effect: Allow
+        Action:
+            - xray:PutTraceSegments
+            - xray:PutTelemetryRecords
+        Resource:
+            - "*"
 
   environment:
       PROC_BUCKET: ${self:service:name}-${self:provider.stage}-proc
@@ -74,6 +82,8 @@ functions:
            - http:
                path: start-work
                method: get
+       healthcheck:
+           tracing: true
     compute:
         handler: serverless_hello/worker.compute
         events:

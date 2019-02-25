@@ -11,6 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "serverless": "^1.37.1",
+    "serverless-plugin-tracing": "^2.0.0",
     "serverless-python-requirements": "^4.3.0"
   },
   "dependencies": {
